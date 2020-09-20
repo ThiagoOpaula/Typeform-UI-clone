@@ -6,10 +6,10 @@ import { Main, Section, Sticky } from './styles';
 import FirstAndSecond from './components/FirstAndSecond';
 import Header from './components/Header';
 
-function App() {
+const App: React.FC = () => {
   React.useEffect(() => {
-    window.scrollTo({ top: 0})
-  }, [])
+    window.scrollTo({ top: 0 });
+  }, []);
 
   return (
     <>
@@ -17,21 +17,21 @@ function App() {
 
       <Header />
 
-      <Main style={{ height: '1610vh'}}>
-        <Section style={{ height: '72.7%'}}>
+      <Main style={{ height: '1610vh' }}>
+        <Section style={{ height: '72.7%' }}>
           <FirstAndSecond />
         </Section>
 
-        <Section style={{ height: '9,7%'}}>
-          <Sticky className="third"/>
+        <Section style={{ height: '9,7%' }}>
+          <Sticky className="third" />
         </Section>
 
-        <Section style={{ height: '10.1%'}}>
-          <Sticky className="fourth"/>
+        <Section style={{ height: '10.1%' }}>
+          <Sticky className="fourth" />
         </Section>
       </Main>
     </>
   );
-}
+};
 
 export default App;
